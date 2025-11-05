@@ -1,0 +1,56 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "hello-b441f",
+          "appId": "1:613550733005:android:1e428c1096b57943d7db84",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "hello-b441f",
+          "configurations": {
+            "android": "1:613550733005:android:1e428c1096b57943d7db84",
+            "ios": "1:613550733005:ios:5161b18f2dc15207d7db84",
+            "macos": "1:613550733005:ios:5161b18f2dc15207d7db84",
+            "web": "1:613550733005:web:825e3722f03da6d8d7db84",
+            "windows": "1:613550733005:web:825e3722f03da6d8d7db84"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    },
+    {
+      "source": "y",
+      "codebase": "ghb",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ]
+}
